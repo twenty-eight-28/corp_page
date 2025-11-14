@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 export default function NewsPage() {
   const newsList = [
-    {
-      date: "2025-11-01",
-      title: "SaaS第3弾「Shiwake」開発開始",
-      content:
-        "フリーランスエンジニア向けの買い切り型会計SaaS『Shiwake』の開発を開始しました。AIによる仕訳補助機能を搭載予定です。",
-    },
+    // {
+    //   date: "2025-11-01",
+    //   title: "SaaS第3弾「Shiwake」開発開始",
+    //   content:
+    //     "フリーランスエンジニア向けの買い切り型会計SaaS『Shiwake』の開発を開始しました。AIによる仕訳補助機能を搭載予定です。",
+    // },
     {
       date: "2025-10-30",
       title: "「NowWhere」β版テスト完了",
       content:
         "リアルタイム位置情報共有アプリ『NowWhere』の開発が完了し、社内テストフェーズへ移行しました。年内リリースを予定しています。",
     },
-    // {
-    //   date: "2025-08-31",
-    //   title: "「ClipBeats」β版リリース",
-    //   content:
-    //     "AIが自動でBGMを生成する音楽SaaS『ClipBeats』のβ版を公開しました。正式リリースは2025年12月を予定しています。",
-    // },
+    {
+      date: "2025-08-31",
+      title: "「ClipBeats」β版リリース",
+      content:
+        "AIが自動でBGMを生成する音楽SaaS『ClipBeats』のβ版を公開しました。正式リリースは2025年12月を予定しています。",
+    },
   ];
 
   return (

@@ -107,7 +107,7 @@ export default function AboutPage() {
           </p>
 
           <p className="text-sm text-gray-400">
-            トゥエンティエイトは、SES・SaaS・宇宙技術・コンテンツなど多軸の事業で
+            トゥエンティエイトは、SES・SaaS・ハードウェア技術・コンテンツなど多軸の事業で
             “創造の限界に挑戦”します。
           </p>
         </motion.div>

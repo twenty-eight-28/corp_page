@@ -44,9 +44,8 @@ export default function ServicePage() {
           color="red"
           description="ClipBeats、NowWhereなど、自社サービスを中心に日常や創作活動を支えるSaaSを展開。AI・音楽・位置情報・会計など、テクノロジーによって人の創造力を拡張するプロダクトを開発。"
           items={[
-            "ClipBeats：AIによるBGMジェネレーター",
+            `ClipBeats：<a href="https://clip-beats.com/" target="_blank" class="text-blue-400 underline decoration-red-400 decoration-2 underline-offset-4 hover:text-red-400 transition">AIによるBGMジェネレーター</a>`,
             "NowWhere：リアルタイム位置情報共有アプリ",
-            "Shiwake：AI補助つき会計アプリ（開発中）",
           ]}
         />
 
@@ -118,7 +117,7 @@ function ServiceCard({
 
       <ul className="text-sm text-gray-400 list-disc pl-5 space-y-1">
         {items.map((item, i) => (
-          <li key={i}>{item}</li>
+          <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
     </motion.div>

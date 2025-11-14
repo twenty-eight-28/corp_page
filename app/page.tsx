@@ -91,15 +91,37 @@ export default function Home() {
       </div>
 
       {/* 本文：下端まで密着（Retina 13”でも隙間ゼロ） */}
-      <main className="relative min-h-[100vh] bg-transparent text-white flex flex-col items-center justify-center px-4 pb-0">
+      <main
+        className="
+          relative 
+          min-h-[100vh] 
+          bg-transparent 
+          text-white 
+          flex 
+          flex-col 
+          items-center 
+          justify-center 
+          px-4 
+          pb-6 
+          pt-10  /* ← モバイルで上に寄せる */
+          md:pt-0 /* ← PCは中央に戻す */
+        "
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 text-center px-4 pt-4 md:pt-6" // ← 少し上に寄せる
+          className="relative z-10 text-center px-3 max-w-[90%] md:max-w-full"
         >
+          {/* ---- 上部キャッチコピー ---- */}
           <motion.h1
-            className="text-lg md:text-xl font-semibold tracking-wide text-gray-500 mb-10" // ← 下余白を広く
+            className="
+              text-base md:text-xl 
+              font-semibold 
+              tracking-wide 
+              text-gray-500 
+              mb-6 md:mb-10
+            "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -107,16 +129,19 @@ export default function Home() {
             株式会社トゥエンティエイト
           </motion.h1>
 
+          {/* ---- グリッチテキスト ---- */}
           <motion.p
             className="
               glitch-text 
-              text-5xl 
+              text-4xl 
+              sm:text-5xl 
               md:text-7xl 
               font-bold 
               text-gray-200 
-              leading-tight 
-              rotate-[-3deg] 
+              leading-tight
               origin-bottom-left
+              rotate-[-1deg] sm:rotate-[-2deg] md:rotate-[-3deg]
+              /* ← スマホでの見切れを防ぐため段階的に弱める */
             "
             data-text="創造の限界に挑戦する会社。"
             initial={{ opacity: 0 }}
@@ -126,8 +151,9 @@ export default function Home() {
             創造の限界に挑戦する会社。
           </motion.p>
 
+          {/* ---- 英語サブキャッチ ---- */}
           <motion.p
-            className="mt-8 text-sm md:text-base text-gray-300" // ← 上に余白を追加
+            className="mt-6 md:mt-8 text-xs md:text-base text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
@@ -136,14 +162,30 @@ export default function Home() {
           </motion.p>
         </motion.div>
 
-        {/* CTA：赤ベース、クリックで波紋 */}
+        {/* ---- CTAボタン ---- */}
         <motion.a
           href="/about"
           onClick={onEnter}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3, duration: 1 }}
-          className="relative inline-block mt-12 px-10 py-4 border border-red-500 text-red-400 font-medium tracking-wide rounded-full overflow-hidden transition-all duration-500 hover:text-white"
+          className="
+            relative 
+            inline-block 
+            mt-10 md:mt-12 
+            mb-10               /* ← モバイルでフッターにくっつかないため */
+            px-8 py-3 md:px-10 md:py-4 
+            border border-red-500 
+            text-red-400 
+            font-medium 
+            tracking-wide 
+            rounded-full 
+            overflow-hidden 
+            transition-all 
+            duration-500 
+            hover:text-white 
+            text-sm md:text-base
+          "
         >
           <span className="relative z-10">Enter the World</span>
           <span className="absolute inset-0 bg-gradient-to-r from-red-500 via-pink-500 to-red-700 opacity-0 hover:opacity-100 blur-md transition-all duration-700"></span>
