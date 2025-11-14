@@ -1,0 +1,127 @@
+/* === ネオン赤＋青ブレンド版 === */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  color: #e5e5e5;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255, 0, 60, 0.25), 0 0 18px rgba(80, 160, 255, 0.2),
+    0 0 30px rgba(255, 0, 60, 0.15);
+  animation: subtlePulse 6s ease-in-out infinite;
+}
+
+/* 擬似要素の色ズレを青寄りで調和 */
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    rgba(255, 60, 60, 0.6),
+    rgba(60, 120, 255, 0.4)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0.4;
+}
+
+.glitch-text::before {
+  transform: translateX(-1px);
+}
+
+.glitch-text::after {
+  transform: translateX(1px);
+}
+
+/* 呼吸感のある光 */
+@keyframes subtlePulse {
+  0%,
+  100% {
+    text-shadow: 0 0 6px rgba(255, 0, 60, 0.2),
+      0 0 16px rgba(80, 160, 255, 0.15);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 0, 80, 0.3),
+      0 0 24px rgba(80, 160, 255, 0.25);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  10% {
+    clip: rect(10px, 900px, 50px, 0);
+    transform: translate(-2px, -2px);
+  }
+  30% {
+    clip: rect(85px, 900px, 140px, 0);
+    transform: translate(2px, 2px);
+  }
+  50% {
+    clip: rect(10px, 900px, 50px, 0);
+    transform: translate(-2px, 0);
+  }
+  70% {
+    clip: rect(85px, 900px, 140px, 0);
+    transform: translate(2px, -1px);
+  }
+  100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  15% {
+    clip: rect(55px, 900px, 95px, 0);
+    transform: translate(2px, 2px);
+  }
+  45% {
+    clip: rect(10px, 900px, 50px, 0);
+    transform: translate(-2px, -1px);
+  }
+  75% {
+    clip: rect(60px, 900px, 120px, 0);
+    transform: translate(2px, 1px);
+  }
+  100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
