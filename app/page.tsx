@@ -94,7 +94,9 @@ export default function Home() {
       <main
         className="
           relative 
-          min-h-[100vh] 
+          min-h-[calc(100vh-70px)]      /* ← スマホのヘッダーぶんを差し引く */
+          md:min-h-[calc(100vh-80px)]   /* ← タブレット */
+          lg:min-h-[calc(100vh-90px)]   /* ← PC */
           bg-transparent 
           text-white 
           flex 
