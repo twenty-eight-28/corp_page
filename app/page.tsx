@@ -100,11 +100,10 @@ export default function Home() {
           flex 
           flex-col 
           items-center 
-          justify-center 
+          justify-start         /* ← スマホは上寄せ */
+          md:justify-center     /* ← タブレット以上は中央 */
           px-4 
-          pb-6 
-          pt-10  /* ← モバイルで上に寄せる */
-          md:pt-0 /* ← PCは中央に戻す */
+          pb-0
         "
       >
         <motion.div
