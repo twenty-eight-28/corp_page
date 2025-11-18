@@ -94,18 +94,17 @@ export default function Home() {
       <main
         className="
           relative 
-          min-h-[calc(100vh-70px)]      /* ← スマホのヘッダーぶんを差し引く */
-          md:min-h-[calc(100vh-80px)]   /* ← タブレット */
-          lg:min-h-[calc(100vh-90px)]   /* ← PC */
+          min-h-[calc(100vh-50px)]      /* ← 少し大きめにしてフッターを隠す */
+          md:min-h-[calc(100vh-60px)]
+          lg:min-h-[calc(100vh-70px)]
           bg-transparent 
           text-white 
           flex 
           flex-col 
           items-center 
-          justify-center           /* ← 常に中央寄せに戻す */
+          justify-center
           px-4 
           pb-0
-          md:pt-0                  /* ← PCは余白なし */
         "
       >
         <motion.div
