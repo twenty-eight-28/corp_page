@@ -24,10 +24,10 @@ export default function RootLayout({
 
         <main
           className="
-            flex-grow 
-            pt-[70px]
-            md:pt-[80px]
-            lg:pt-[90px]
+          flex-grow
+          pt-[56px]      /* ← スマホ最適化（Header高さジャスト） */
+          md:pt-[63px]
+          lg:pt-[70px]
           "
         >
           {children}
