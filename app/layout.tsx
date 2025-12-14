@@ -2,6 +2,7 @@ import "./globals.css";
 import "./glitch.css";
 import type { Metadata } from "next";
 import Header from "./Header";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "株式会社トゥエンティエイト",
@@ -19,6 +20,24 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="bg-black text-white min-h-screen flex flex-col font-sans">
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LLL1GFERJ4', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {/* クライアント側ヘッダー */}
         <Header />
 
