@@ -25,6 +25,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
         />
+        <meta name="google-site-verification" content="WONRoky-usvNr6XYYYXEtV-HO735CeIdM36R7tzGIdc" />
         <Script
           id="google-analytics"
           strategy="afterInteractive"
