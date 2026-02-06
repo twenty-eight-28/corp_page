@@ -63,7 +63,7 @@ export default function RootLayout({
               ステュディオ新大阪1030号室
             </p>
             <p className="mt-2 text-gray-500 text-[11px] md:text-sm">
-              © 2025 TwentyEight Inc. All rights reserved.
+              © 2026 TwentyEight Inc. All rights reserved.
             </p>
           </div>
         </footer>
