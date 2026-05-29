@@ -95,7 +95,9 @@ function NavLinks({
       <Link href="/recruit" className={base} onClick={onClick}>
         Recruit
       </Link>
-      <a href="/games/28shift">Mini Game</a>
+      <Link href="/games/28shift/index.html">
+        Mini Game
+      </Link>
       <Link href="/contact" className={base} onClick={onClick}>
         Contact
       </Link>
