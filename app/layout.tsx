@@ -54,15 +54,46 @@ export default function RootLayout({
         </main>
 
         <footer className="border-t border-gray-800 bg-black/80 text-gray-400 text-xs md:text-sm text-center py-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto px-4">
             <p className="text-red-500 font-semibold mb-2 tracking-wide">
               株式会社トゥエンティエイト
             </p>
+
             <p className="text-gray-500 text-[11px] md:text-sm">
               〒533-0033 大阪府大阪市東淀川区東中島1丁目17-5
               ステュディオ新大阪1030号室
             </p>
-            <p className="mt-2 text-gray-500 text-[11px] md:text-sm">
+
+            <div className="mt-3 flex justify-center gap-4 text-[11px] md:text-xs text-gray-600">
+              <a
+                href="https://note.com/rosy_wolf1363"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition"
+              >
+                note
+              </a>
+
+              <a
+                href="https://www.youtube.com/@future_2828"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition"
+              >
+                YouTube
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@future_2828"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition"
+              >
+                TikTok
+              </a>
+            </div>
+
+            <p className="mt-3 text-gray-500 text-[11px] md:text-sm">
               © 2026 TwentyEight Inc. All rights reserved.
             </p>
           </div>
